@@ -1,4 +1,4 @@
-- name: install remi release
+  - name: install remi release
     ansible.builtin.dnf: # check pacakge will work not
       name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
       state: present

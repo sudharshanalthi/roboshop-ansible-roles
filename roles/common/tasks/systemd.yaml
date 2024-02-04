@@ -3,17 +3,18 @@
 #     src: "{{component}}.service"
 #     dest: "/etc/systemd/system/{{component}}.service"
 
-- name: "Copy {{component}} service"
+- name: Copy catalogue service
   ansible.builtin.template:
-    src: "{{component}}.service.j2"
-    dest: "/etc/systemd/system/{{component}}.service"
+    src: catalogue.service
+    dest: "/etc/systemd/system/catalogue.service
 
 - name: deamon realod and start
   ansible.builtin.systemd_service:
     daemon_reload: true
 
-- name: "start and enable {{component}}"
+- name: start and enable catalogue
   ansible.builtin.service:
-    name: "{{component}}"
+    name: catalogue
     state: restarted
     enabled: yes
+    

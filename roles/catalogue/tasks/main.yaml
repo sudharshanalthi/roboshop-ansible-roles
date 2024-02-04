@@ -18,10 +18,7 @@
     name: common
     tasks_from: systemd
 
-- name: deployment
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: deployment
-    
+
+
     
     
